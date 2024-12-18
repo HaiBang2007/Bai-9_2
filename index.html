@@ -1,0 +1,32 @@
+
+def generate_html_table(data):
+    html_content = "<table style=\"border-collapse: collapse;\">"
+    # Thêm tiêu đề cho bảng
+    html_content += "<tr>"
+    html_content += "<th style=\"border: 2px solid blue;\">Họ tên</th>"
+    html_content += "<th style=\"border: 2px solid blue;\">Điểm Toán</th>"
+    html_content += "<th style=\"border: 2px solid blue;\">Điểm Vật lí</th>"
+    html_content += "<th style=\"border: 2px solid blue;\">Điểm Hóa học</th>"
+    html_content += "</tr>"
+    # Thêm dữ liệu từ list data vào bảng
+    for row in data:
+        html_content += "<tr>"
+       
+        for value in row:
+            html_content += f"<td style=\"border: 2px solid black;\">{value}</td>"
+        html_content += "</tr>"
+    html_content += "</table>"
+    return html_content
+# Dữ liệu ban đầu
+initial_data = [
+    ["Họ tên", "Điểm Toán", "Điểm Vật lí", "Điểm Hóa học"],
+    ["Nguyễn Văn A", "8.5", "7.0", "9.0"],
+    ["Trần Thị B", "7.0", "8.0", "8.5"]
+]
+# Dữ liệu mới cần bổ sung
+new_data = [
+    ["Lê Quang C", "6.5", "7.5", "8.0"],
+    ["Phạm Thị D", "9.0", "8.5", "7.5"]
+
+
+
